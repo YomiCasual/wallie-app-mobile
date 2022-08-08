@@ -9,12 +9,16 @@ import {
   Input,
   Button,
   ScrollView,
+  Actionsheet,
+  useDisclose,
 } from "native-base";
 import React from "react";
 import { Image, ImageBackground } from "react-native";
 import { icons, images, SIZES } from "../constants";
 import { APP_ROUTES } from "../navigation/routes";
 import { TextInput } from "../reusables";
+import { useEffect } from "react";
+import axios from "axios";
 
 const Signup = () => {
   const navigation = useNavigation();
@@ -74,6 +78,10 @@ const Signup = () => {
               Continue
             </Text>
           </Button>
+
+          {/* 
+			
+		*/}
         </VStack>
       </ScrollView>
     </Box>

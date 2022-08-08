@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Flex, VStack, Text, Image, Button } from "native-base";
 import { FEATURES_LIST } from "./constants";
+import { TouchableOpacity } from "react-native";
 
 const Features = () => {
   return (
@@ -11,15 +12,16 @@ const Features = () => {
       <Flex flexDirection="row" flexWrap="wrap" justifyContent="space-between">
         {FEATURES_LIST.map(({ id, icon, title, bgColor, iconColor }) => (
           <Box key={id} mx={2} my={3}>
-            <VStack maxWidth="20">
-              <Button
-                variant="unstyled"
-                height={"50px"}
-                width={"50px"}
-                bgColor={bgColor}
-                justifyContent="center"
-                alignItems="center"
-                borderRadius={"20px"}
+            <VStack maxWidth="20" width={"50px"}>
+              <TouchableOpacity
+                style={{
+                  height: 50,
+                  width: 50,
+                  borderRadius: 20,
+                  backgroundColor: bgColor,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <Image
                   source={icon}
@@ -28,7 +30,7 @@ const Features = () => {
                   height="20px"
                   tintColor={iconColor}
                 />
-              </Button>
+              </TouchableOpacity>
               <Text
                 lineHeight="16px"
                 mt={2}

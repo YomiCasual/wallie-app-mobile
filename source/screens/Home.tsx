@@ -19,7 +19,7 @@ const Home = () => {
     <AppLayout hasBottomBar>
       <Box width={SIZES.width * 0.85} bgColor="white" mx="auto">
         <Navbar />
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <ScrollView showsVerticalScrollIndicator={false} mb="40">
           <Box
             mt={4}
             mb={8}

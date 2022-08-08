@@ -11,6 +11,7 @@ import {
 } from "native-base";
 import { FEATURES_LIST } from "./constants";
 import { icons, images } from "../../constants";
+import { TouchableOpacity } from "react-native";
 
 const SpecialPromo = () => {
   return (
@@ -19,15 +20,22 @@ const SpecialPromo = () => {
         SpecialPromo
       </Text>
       <Flex flexDirection="row" flexWrap="wrap" justifyContent="space-between">
-        {[1, 2].map((item) => (
-          <Pressable
+        {[1, 2, 3, 4].map((item) => (
+          <TouchableOpacity
             key={item}
-            borderRadius={"10px"}
-            width="45%"
-            shadow={4}
-            bgColor="white"
-            overflow="hidden"
-            pb="4"
+            style={{
+              borderRadius: 10,
+              width: "45%",
+              backgroundColor: "white",
+              overflow: "hidden",
+              marginBottom: 30,
+            }}
+            // borderRadius={"10px"}
+            // width="45%"
+            // shadow={4}
+            // bgColor="white"
+            // overflow="hidden"
+            // pb="4"
           >
             <Image
               width="full"
@@ -49,7 +57,7 @@ const SpecialPromo = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </Text>
             </VStack>
-          </Pressable>
+          </TouchableOpacity>
         ))}
       </Flex>
     </VStack>

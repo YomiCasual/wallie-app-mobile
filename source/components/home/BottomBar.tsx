@@ -101,8 +101,10 @@ const BottomBar = ({ state, descriptors, navigation }) => {
               >
                 <Button
                   onPress={() => {
-                    onPress();
-                    setTopValue(new Animated.Value(0));
+                    if (!isFocused) {
+                      onPress();
+                      setTopValue(new Animated.Value(0));
+                    }
                   }}
                   onLongPress={onLongPress}
                   variant="unstyled"

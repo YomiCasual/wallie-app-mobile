@@ -59,6 +59,22 @@ export const FEATURES_LIST = [
     iconColor: "#6A3BED",
   },
 ];
+export const PAYMENT_METHOD_LIST = [
+  {
+    id: "phone-number",
+    icon: icons.phone,
+    title: "Phone Number",
+    bgColor: "#F2EFFF",
+    iconColor: "#6A3BED",
+  },
+  {
+    id: "bar-code",
+    icon: icons.barcode,
+    title: "Bar Code",
+    bgColor: "#E7FFF1",
+    iconColor: "#54CF85",
+  },
+];
 
 export const BOTTOM_BAR_LIST = [
   {

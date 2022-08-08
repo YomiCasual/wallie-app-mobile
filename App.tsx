@@ -1,4 +1,5 @@
 import React from "react";
+import { SWRConfig } from "swr";
 import {
   Text,
   Link,
@@ -17,6 +18,7 @@ import { useFonts } from "expo-font";
 import { appFonts, baseAppTheme } from "./source/constants";
 import { LogBox } from "react-native";
 import CreateAppNavigation from "./source/navigation";
+import SwrProvider from "./source/utils/Swr";
 LogBox.ignoreLogs(["Overwriting fontFamily style attribute preprocessor"]);
 
 // Define the config
@@ -44,9 +46,11 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={baseAppTheme}>
-      <Box fontFamily="mono" flex="1">
-        <CreateAppNavigation />
-      </Box>
+      <SwrProvider>
+        <Box fontFamily="mono" flex="1">
+          <CreateAppNavigation />
+        </Box>
+      </SwrProvider>
     </NativeBaseProvider>
   );
 }
